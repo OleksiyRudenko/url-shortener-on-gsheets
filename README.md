@@ -76,7 +76,7 @@ This server can be configured with these following parameters:
 |-----|------|
 | `SHEET_NAME` | Specify the sheet name. Default = `short-urls`. |
 | `CACHE_TTL` | How frequently the spreadsheet must be reloaded. Default = `5s`. |
-| `HOME_REDIRECT` | Which url to redirect to when root url (`/`) is visited. |
+| `HOME_REDIRECT` | Which url to redirect to when root url (`/`) is visited. Default = `https://github.com/OleksiyRudenko/url-shortener-on-gsheets/` |
 | `LISTEN_ADDR` | (optional) which network address to listen on (default `""` which means all interfaces). |
 | `PORT` | (optional) http port to listen on (default `8080`). |
 | `REDIRECT_STATUS` | (optional) HTTP status code to return upon redirect. (default `301`, Moved Permanently). |
@@ -87,3 +87,7 @@ This is not an official Google project. It's distributed as-is under Apache 2.0
 License. See [LICENSE](./LICENSE).
 
 [ex]: https://docs.google.com/spreadsheets/d/1wCcj0Y4wFUHGAY0DmyefFlQ3s1DR8aUTz9seykM2iJ8/edit?usp=sharing
+
+## References
+
+- [Google Cloud Deploy `app.json`](https://github.com/GoogleCloudPlatform/cloud-run-button#customizing-deployment-parameters)
