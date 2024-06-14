@@ -36,8 +36,9 @@ The `go.ahmet.dev/gcp/golang-samples` will be redirected to
 1. Save the ID of your Sheet from the URL (it’s a random string
    that looks like `1SMeoyesCaGHRlYdGj9VyqD-qhXtab1jrcgHZ0irvNDs`).
 
-1. Click to deploy to Cloud Run, and provide your spreadsheet
-   ID while deploying:
+1. Click to deploy to Cloud Run, and provide your **spreadsheet
+   ID**, **sheet name** to monitor, **cache update frequency** (TTL), and **redirect destination** when root (`/`)
+   is visited while deploying:
 
    [![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run)
 
@@ -73,12 +74,12 @@ This server can be configured with these following parameters:
 
 | Environment Variable | Description |
 |-----|------|
-| `SHEET_NAME` | (optional) If you have multiple sheets in a spreadsheet, specify the sheet name. |
-| `CACHE_TTL` | (optional) how frequently the spreadsheet must be reloaded (default: `5s`) |
-| `HOME_REDIRECT` | (optional) which url to redirect when root url (`/`) is visited
-| `LISTEN_ADDR` | (optional) which network address to listen on (default `""` which means all interfaces) |
-| `PORT` | (optional) http port to listen on (default `8080`).
-| `REDIRECT_STATUS` | (optional) HTTP status code to return upon redirect. (default `301`, Moved Permanently).
+| `SHEET_NAME` | Specify the sheet name. Default = `short-urls`. |
+| `CACHE_TTL` | How frequently the spreadsheet must be reloaded. Default = `5s`. |
+| `HOME_REDIRECT` | Which url to redirect to when root url (`/`) is visited. |
+| `LISTEN_ADDR` | (optional) which network address to listen on (default `""` which means all interfaces). |
+| `PORT` | (optional) http port to listen on (default `8080`). |
+| `REDIRECT_STATUS` | (optional) HTTP status code to return upon redirect. (default `301`, Moved Permanently). |
 
 ## Disclaimer
 
