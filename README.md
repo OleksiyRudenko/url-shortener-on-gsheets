@@ -31,7 +31,7 @@ The `go.ahmet.dev/gcp/golang-samples` will be redirected to
 1. Create a new **Google Sheet**: https://sheets.new.
 
 1. Add two columns, first column is the "shortcut", the second
-   column is the "url" to redirect the user. ([see example][ex])
+   column is the "url" to redirect the user, third is "is clicked", forth is "clicked at". ([see example][ex])
 
 1. Save the ID of your Sheet from the URL (it’s a random string
    that looks like `1SMeoyesCaGHRlYdGj9VyqD-qhXtab1jrcgHZ0irvNDs`).
@@ -43,11 +43,11 @@ The `go.ahmet.dev/gcp/golang-samples` will be redirected to
    [![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run)
 
 1. Go to https://console.cloud.google.com/run, click on
-   `sheets-url-shortener` service. Find the email address written in the
-   "Service Account" section.
+   `sheets-url-shortener` service. Find the email address written
+   under `YAML` section (`serviceAccountName` property, emails looks similar to `123123123123-compute@developer.gserviceaccount.com`).
 
 1. Go to your Google Sheets, click "Share" and give this email
-   address "Viewer" access on your sheet.
+   address "Editor" access on your sheet.
 
 1. Go to https://console.developers.google.com/apis/api/sheets.googleapis.com/overview
    and make sure the Google Sheets API is enabled.
