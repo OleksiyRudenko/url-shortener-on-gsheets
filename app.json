@@ -3,6 +3,21 @@
         "GOOGLE_SHEET_ID":{
             "description": "Provide your Sheet ID string",
             "required": true
+        },
+        "SHEET_NAME":{
+            "description": "Provide sheet name",
+            "required": true,
+            "default": "short-urls"
+        },
+        "CACHE_TTL":{
+            "description": "Provide cache TTL",
+            "required": true,
+            "default": "5s"
+        },
+        "HOME_REDIRECT":{
+            "description": "Provide redirect url for when no shortcut provided",
+            "required": true,
+            "default": "https://github.com/OleksiyRudenko/url-shortener-on-gsheets/"
         }
     },
     "hooks":{
