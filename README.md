@@ -41,6 +41,18 @@ The `go.ahmet.dev/gcp/golang-samples` will be redirected to
 
    [![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run)
 
+   > If you get error
+   > `Error: failed to push image to gcr.io/url-shortener-for-nx2ch/url-shortener-on-gsheets: docker push failed: exit status 1, output:`
+   > ...
+   > `denied: Unauthenticated request. Unauthenticated requests do not have permission "artifactregistry.repositories.uploadArtifacts" on resource "projects/PROJECT_ID/locations/us/repositories/gcr.io" (or it may not exist)`
+   > then the solution would be to run the following command
+   > `gcloud auth configure-docker`
+   > and then re-run
+   > `docker push gcr.io/url-shortener-for-nx2ch/url-shortener-on-gsheets`
+   > (the command that failed producing the error messages above).
+   > 
+   > Solution source: https://github.com/GoogleCloudPlatform/cloud-run-button/issues/247 
+
 1. Go to https://console.cloud.google.com/run, click on
    `sheets-url-shortener` service. Find the email address written in the
    "Service Account" section.
